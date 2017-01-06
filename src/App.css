@@ -1,0 +1,53 @@
+.app {
+  text-align: center;
+}
+
+.show-component {
+  text-align: center;
+  padding: 0;
+  margin-top: 10px;
+  user-select: none;
+}
+
+.show-image {
+  width: 250px;
+  height: 375px;
+}
+
+.show-episodes {
+  color: #aaa;
+  font-family: HelveticaNeueLT, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: small;
+  padding: 0;
+  margin: 10px 0 0 5px;
+}
+
+.show-title {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: HelveticaNeueLT, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 5px 0 10px 5px;
+}
+
+.show-navigation {
+  font-size: 30px;
+  padding: 10px 40px 10px 40px;
+  margin: 10px 0 0 10px;
+}
+
+@media (min-width: 980px) {
+
+  .show-image {
+    width: 360px;
+    height: 540px;
+  }
+
+  .show-navigation {
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    margin: 10px 0 0 10px;
+  }
+
+}
