@@ -9,7 +9,7 @@
     "build": "npx webpack --config webpack.config.js",
     "dev": "npx webpack-cli serve --config webpack.config.js & npm run start-api & nodemon",
     "start-api": "json-server --watch shows.json",
-    "lint": "npx eslint src --ext .js,.jsx"
+    "lint": "npx eslint src --ext .js,.jsx && npx stylelint '**/*.scss'"
   },
   "dependencies": {
     "@babel/runtime": "^7.13.10",
@@ -43,6 +43,8 @@
     "nodemon": "^2.0.7",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.1",
+    "stylelint": "^13.12.0",
+    "stylelint-scss": "^3.19.0",
     "webpack": "^5.28.0",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"

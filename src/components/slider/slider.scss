@@ -11,7 +11,7 @@
     align-items: flex-end;
   }
 
-  &>div {
+  > div {
     display: inline-flex;
     padding: 0 calc(50% - #{slide.$width / 2});
 
