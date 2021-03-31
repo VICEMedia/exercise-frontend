@@ -8,10 +8,13 @@ import './slide.scss';
 const Slide = ({ id, number, active }) => (
   <Link
     to={`?id=${id}`}
+    aria-label={`Show ${number}`}
     className={cn('slide', active && 'active')}
   >
     <div className="square" />
-    <div className="number">{number}</div>
+    <div className="number">
+      {number}
+    </div>
   </Link>
 );
 

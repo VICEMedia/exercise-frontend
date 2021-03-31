@@ -13,7 +13,9 @@ const Show = ({ show }) => {
         src={show.product_image_url}
         alt={show.title}
       />
-      <strong>{`${show.episodes} episodes`}</strong>
+      <p>
+        <b>{`${show.episodes} episodes`}</b>
+      </p>
       <h1>{show.title}</h1>
     </main>
   );
