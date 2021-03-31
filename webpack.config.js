@@ -14,7 +14,7 @@ module.exports = {
   entry: './src/App.jsx',
   output: {
     filename: '[name].js',
-    path: path.resolve(__dirname, 'build'),
+    path: path.join(__dirname, 'build'),
   },
   module: {
     rules: [
@@ -49,7 +49,6 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'build'),
-    // compress: true,
     port: 8080,
   },
   plugins: [

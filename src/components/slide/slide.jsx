@@ -21,7 +21,11 @@ const Slide = ({ id, number, active }) => (
 Slide.propTypes = {
   id: PropTypes.string.isRequired,
   number: PropTypes.number.isRequired,
-  active: PropTypes.bool.isRequired,
+  active: PropTypes.bool,
+};
+
+Slide.defaultProps = {
+  active: false,
 };
 
 export default Slide;
