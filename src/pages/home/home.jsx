@@ -24,8 +24,11 @@ const Home = () => {
     if (!shows) { return; }
     const params = new URLSearchParams(search);
     const activeShowId = params.get('id');
-    setActiveShowIndex(shows.findIndex(show => show.id === activeShowId));
+    const index = Math.max(shows.findIndex((show) => show.id === activeShowId), 0);
+    setActiveShowIndex(index);
   }, [search, shows]);
+
+  const activeShow = typeof activeShowIndex !== 'undefined' ? shows[activeShowIndex] : null;
 
   return (
     <div className="home">
@@ -34,9 +37,7 @@ const Home = () => {
         shows={shows}
       />
 
-      {typeof activeShowIndex !== 'undefined' && (
-        <Show show={shows[activeShowIndex]} />
-      )}
+      <Show show={activeShow} />
     </div>
   );
 };

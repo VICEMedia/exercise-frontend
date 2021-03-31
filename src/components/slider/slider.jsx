@@ -9,9 +9,8 @@ const Slider = ({ activeShowIndex, shows }) => {
 
   useEffect(() => {
     /*
-      This value MUST be identical to the slide width variable
-      used in our Slide component's SCSS in order for things to
-      line up properly.
+      This value MUST match it's scss counterpart
+      for the UI to align correctly.
     */
     const slideWidth = 160;
 
