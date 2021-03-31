@@ -1,0 +1,47 @@
+@use '../../styles/breakpoints';
+
+$width: 160px;
+
+.slide {
+  width: $width;
+  padding: 3rem 0px 2.5rem;
+  text-align: center;
+
+  @media screen and (min-width: breakpoints.$sm) {
+    padding: 3.75rem 0px 1.5rem;
+  }
+
+  .square {
+    background-color: #e5e5e5;
+    width: 68px;
+    height: 67px;
+    margin: 16px 46px;
+  }
+
+  .number {
+    font-size: 1.75rem;
+    visibility: hidden;
+  }
+
+  &:hover {
+    .square {
+      background-color: #d5d5d5;
+    }
+
+    .number {
+      color: #d5d5d5;
+      visibility: visible;
+    }
+  }
+
+  &.active {
+    .square {
+      background-color: black;
+    }
+
+    .number {
+      color: black;
+      visibility: visible;
+    }
+  }
+}

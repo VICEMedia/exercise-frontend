@@ -1,0 +1,22 @@
+@use '../../styles/breakpoints';
+@use '../slide/slide';
+
+.slider {
+  display: flex;
+  box-shadow: 0px -2px 4px 0px #0000001a;
+  overflow-y: scroll;
+
+  @media screen and (min-width: breakpoints.$sm) {
+    box-shadow: 0px 2px 4px 0px #0000001a;
+    align-items: flex-end;
+  }
+
+  &>div {
+    display: inline-flex;
+    padding: 0 calc(50% - #{slide.$width / 2});
+
+    @media screen and (min-width: breakpoints.$sm) {
+      padding: 0 50% 0 calc(50% - #{slide.$width});
+    }
+  }
+}
