@@ -1,4 +1,3 @@
-/* eslint-env jest */
 import React from 'react';
 import { mount } from 'enzyme';
 import { BrowserRouter, Link } from 'react-router-dom';

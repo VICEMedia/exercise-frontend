@@ -1,7 +1,8 @@
 const path = require('path');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
-const mode = 'development';
+const mode = process.env.NODE_ENV || 'development';
 
 module.exports = {
   resolve: {
@@ -9,12 +10,15 @@ module.exports = {
   },
   mode,
   stats: {
-    errorDetails: true
+    errorDetails: true,
   },
-  entry: './src/App.jsx',
+  entry: {
+    app: './src/App.jsx',
+  },
   output: {
-    filename: '[name].js',
-    path: path.join(__dirname, 'build'),
+    filename: '[name].min.js',
+    path: path.join(__dirname, 'dist'),
+    clean: true
   },
   module: {
     rules: [
@@ -48,15 +52,12 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, 'build'),
     port: 8080,
   },
   plugins: [
     new MiniCssExtractPlugin({
-      // Options similar to the same options in webpackOptions.output
-      // both options are optional
-      filename: "[name].css",
-      chunkFilename: "[id].css",
+      filename: "[name].min.css",
     }),
+    new OptimizeCssAssetsPlugin()
   ],
 };
