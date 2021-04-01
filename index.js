@@ -6,10 +6,11 @@ const mode = process.env.NODE_ENV || 'development';
 
 console.log("mode", mode, "node env", process.env.NODE_ENV);
 
+const host = 'http://localhost';
 const port = 3001;
-const baseUrl = `http://localhost:${port}`;
+const baseUrl = `${host}:${port}`;
 
-let staticUrl = 'http://localhost:8080/';
+let staticUrl = `${host}:8080/`;
 
 if (mode === 'production') {
   app.use('/dist', express.static('dist'));
@@ -17,10 +18,6 @@ if (mode === 'production') {
 }
 
 app.use('/images', express.static('images'));
-
-// app.get('*', (_, res) => {
-//   res.sendFile(__dirname + '/index.html');
-// });
 
 app.get('*', (_, res) => {
   fs.readFile(__dirname + '/index.html', 'utf8', (err, data) => {
@@ -30,9 +27,6 @@ app.get('*', (_, res) => {
     res.send(data.replace(/\{ STATIC_URL \}/g, staticUrl));
   });
 });
-
-
-
 
 app.listen(port, () => {
   console.log(`Listening at ${baseUrl}`);
