@@ -6,8 +6,13 @@ import './slider.scss';
 
 const Slider = ({ activeShowIndex, shows }) => {
   const container = useRef();
+  const autoScrollBehavior = useRef();
 
   useEffect(() => {
+    if (activeShowIndex === null) {
+      return;
+    }
+
     /*
       This value MUST match it's scss counterpart
       for the UI to align correctly.
@@ -17,8 +22,10 @@ const Slider = ({ activeShowIndex, shows }) => {
     container.current.scroll({
       top: 0,
       left: activeShowIndex * slideWidth,
-      behavior: 'smooth',
+      behavior: autoScrollBehavior.current,
     });
+
+    autoScrollBehavior.current = 'smooth';
   }, [activeShowIndex]);
 
   return (
@@ -46,7 +53,7 @@ Slider.propTypes = {
 };
 
 Slider.defaultProps = {
-  activeShowIndex: 0,
+  activeShowIndex: null,
   shows: [],
 };
 
