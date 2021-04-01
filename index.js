@@ -1,18 +1,39 @@
+const fs = require('fs');
 const express = require('express');
-// const renderApp = require('./src/renderApp');
-
 const app = express();
 
-const port = 3001;
+const mode = process.env.NODE_ENV || 'development';
 
-// app.use('/static', express.static(__dirname + '/build'))
+console.log("mode", mode, "node env", process.env.NODE_ENV);
+
+const port = 3001;
+const baseUrl = `http://localhost:${port}`;
+
+let staticUrl = 'http://localhost:8080/';
+
+if (mode === 'production') {
+  app.use('/dist', express.static('dist'));
+  staticUrl = `${baseUrl}/dist/`;
+}
 
 app.use('/images', express.static('images'));
 
+// app.get('*', (_, res) => {
+//   res.sendFile(__dirname + '/index.html');
+// });
+
 app.get('*', (_, res) => {
-  res.sendFile(__dirname + '/index.html');
+  fs.readFile(__dirname + '/index.html', 'utf8', (err, data) => {
+    if (err) {
+      return console.log(err);
+    }
+    res.send(data.replace(/\{ STATIC_URL \}/g, staticUrl));
+  });
 });
 
+
+
+
 app.listen(port, () => {
-  console.log(`Listening at http://localhost:${port}`);
+  console.log(`Listening at ${baseUrl}`);
 });

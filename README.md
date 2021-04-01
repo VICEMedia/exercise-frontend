@@ -8,6 +8,54 @@ Below is a HTML/CSS/JS exercise that involves building out a web component, or s
 - Add one or more unit tests using Jest or Mocha/Chai.
 - Bonus: Use a module bundler or task manager such as Webpack to compile static assets. Along with this, include a linter for your code (ESLint, Prettier, ect.).
 
+## Solution
+
+You can use `npm` or `yarn` for all applicable commands.  `yarn` will be used for all examples in this document.
+
+### Installation
+
+`yarn`
+
+\* If you run into issues with your node version, install the compatible node version with:
+
+`nvm install <version>`
+
+### Running locally
+
+You can run the json-server/api and enable hot-reloading to ease development **all in one command**:
+
+`yarn dev`
+
+Then, go to http://localhost:3001 in your browser.
+
+### Run linters
+
+This will run eslint for all JS/JSX files and stylelint for all SCSS files:
+
+`yarn lint`
+
+### Run unit tests
+
+Run jest unit tests:
+
+`yarn test`
+
+### Build for production
+
+**This does NOT deploy anything**
+
+`yarn build`
+
+This will output minified production-ready source files under the `/dist` folder.
+
+### Simulate a production environment locally
+
+You can view the site as a production simulation using the output from `yarn build` using:
+
+`yarn prod`
+
+Then, just like with `yarn dev`, go to http://localhost:3001 in your browser.
+
 ## Exercise
 In index.html, rebuild the mocks in the designs folder in semantic HTML, CSS and JS. The designs represent layouts in a smaller screen and a larger screen. It is not 2 pages. Feel free to diverge from the designs and apply your own creativity. The goal is to build a simple UI that allows users to navigate between various shows while displaying the corresponding meta data for each.
 
