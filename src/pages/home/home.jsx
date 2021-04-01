@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { Show, Slider } from '../../components';
 
 import './home.scss';
@@ -32,6 +33,10 @@ const Home = () => {
 
   return (
     <div className="home">
+      <Helmet>
+        {activeShow && <title>{`Shows - ${activeShow.title}`}</title>}
+      </Helmet>
+
       <Slider
         activeShowIndex={activeShowIndex}
         shows={shows}

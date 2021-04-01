@@ -8,7 +8,7 @@ Below is a HTML/CSS/JS exercise that involves building out a web component, or s
 - Add one or more unit tests using Jest or Mocha/Chai.
 - Bonus: Use a module bundler or task manager such as Webpack to compile static assets. Along with this, include a linter for your code (ESLint, Prettier, ect.).
 
-## Solution
+## Chad Harter's Solution
 
 You can use `npm` or `yarn` for all applicable commands.  `yarn` will be used for all examples in this document.
 
