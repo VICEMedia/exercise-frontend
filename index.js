@@ -4,8 +4,6 @@ const app = express();
 
 const mode = process.env.NODE_ENV || 'development';
 
-console.log("mode", mode, "node env", process.env.NODE_ENV);
-
 const host = 'http://localhost';
 const port = 3001;
 const baseUrl = `${host}:${port}`;
