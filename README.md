@@ -3,9 +3,9 @@
 Below is a HTML/CSS/JS exercise that involves building out a web component, or single page app, to navigate through various VICE shows.
 
 - Use HTML5 semantic markup elements.
-- Write your CSS using a preprocessor (Sass).
-- Use React as your JavaScript library and try to avoid using Create React App.
-- Add one or more unit tests using Jest or Mocha/Chai.
+- Write your CSS using CSS-in-JS (styled-components)or a preprocessor (Sass).
+- Use React as your JavaScript library (bonus points for a solid NextJS implementation).
+- Add one or more unit tests using Jest.
 - Bonus: Use a module bundler or task manager such as Webpack to compile static assets. Along with this, include a linter for your code (ESLint, Prettier, ect.).
 
 ## Exercise
@@ -20,3 +20,4 @@ In index.html, rebuild the mocks in the designs folder in semantic HTML, CSS and
 - A url with http://{{page_url}}?id=b2 should have the second show selected on page reload.
 - When clicking between shows, hitting “Back” and “Forward” on the browser will also update the url, cover image, title, and episode count according to the show id.
 - The minimum width of the screen is 320px. The horizontal breakpoint is at 980px. Build with a mobile first approach.
+- Bonus: Get this application into a hosted environment. This will include hosting the JSON for the shows and fetching this data.
