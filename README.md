@@ -11,6 +11,7 @@ Note: port :3000 is required for the data here. So if is already in use, you mig
 
 ```
 $ yarn install
+$ yarn start-api
 $ yarn build
 $ yarn run start
 
