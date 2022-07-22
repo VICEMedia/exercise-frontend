@@ -4,22 +4,22 @@ Hi Vice, it's me, Ro. I've been working on the VICE Front End coding exercise an
 
 ## Installation
 
-Hopefully, should get the permissions issue sorted, but to get this spun up, follow the steps below: 
-Clone the repo: ```https://github.com/RoOLeary/take-home-vce.git```
-
+This project is also accessible at: ```https://github.com/RoOLeary/take-home-vce.git```
 I'd also suggest upgrading yarn before getting started. Anyways...away we go!
 
 ```
 $ yarn install
 $ yarn build
 $ yarn run start
+
 ```
 
-```install``` - does what it says
-```build``` - run webpack
-```run start``` - starts index.html file on http://localhost:4000, with the start command also starting up the
-json-server, which will serve the shows.json on http://localhost:3000/shows.json, as per original project structure
+```yarn install``` - does what it says
 
+```yarn build``` - run webpack
+
+```yarn run start``` - starts index.html file on http://localhost:4000, with the start command also starting up the
+json-server, which will serve the shows.json on http://localhost:3000/shows.json, as per original project structure
 
 This HTML/CSS/JS exercise, involved my building out a single page app, to render a standalone React component to navigate through various VICE shows.
 
