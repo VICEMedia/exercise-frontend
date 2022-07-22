@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="sc-bczRLJ cGrDtW mainLayout"
+>
+  <div
+    className="sc-iqcoie gsDiQy"
+  >
+    <ul
+      className="sc-crXcEl kTeTAh"
+    >
+      <h1
+        className="sc-evZas geJLAy"
+      >
+        Loading Shows...
+      </h1>
+    </ul>
+    <hr
+      className="sc-ksZaOG dxRPeS"
+    />
+    <div
+      className="sc-breuTD ggXwcJ"
+    >
+      <a
+        className="sc-ftvSup iSZRKp"
+        onClick={[Function]}
+      >
+        Reset
+      </a>
+      <a
+        className="sc-kDDrLX bqZRJm"
+        onClick={[Function]}
+      >
+        Arrows
+      </a>
+    </div>
+  </div>
+</div>
+`;
