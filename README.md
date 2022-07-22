@@ -7,6 +7,8 @@ Hi Vice, it's me, Ro. I've been working on the VICE Front End coding exercise an
 This project is also accessible at: ```https://github.com/RoOLeary/take-home-vce.git```
 I'd also suggest upgrading yarn before getting started. Anyways...away we go!
 
+Note: port :3000 is required for the data here. So if is already in use, you might want to kill that first: ```lsof -i tcp:3000``` 
+
 ```
 $ yarn install
 $ yarn build
