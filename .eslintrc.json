@@ -1,3 +1,172 @@
 {
-  "extends": "next/core-web-vitals"
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jest": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:prettier/recommended",
+        "plugin:styled-components-a11y/recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@next/next/recommended"
+    ],
+    "plugins": [
+        "@typescript-eslint",
+        "react",
+        "react-hooks",
+        "better-styled-components",
+        "styled-components-a11y",
+        "sort-imports-es6-autofix",
+        "sort-keys-fix",
+        "absolute-import",
+        "import"
+    ],
+    "overrides": [
+        {
+            "files": ["pages/**/*.{ts,tsx}"]
+        }
+    ],
+    "rules": {
+        "import/order": [
+            "error",
+            {
+                "pathGroups": [
+                    {
+                        "pattern": "next",
+                        "group": "external"
+                    },
+                    {
+                        "pattern": "components",
+                        "group": "internal"
+                    },
+                    {
+                        "pattern": "components/**",
+                        "group": "internal"
+                    },
+                    {
+                        "pattern": "constants/**",
+                        "group": "index"
+                    },
+                    {
+                        "pattern": "helpers/**",
+                        "group": "index"
+                    },
+                    {
+                        "pattern": "config",
+                        "group": "index"
+                    },
+                    {
+                        "pattern": "lib/**",
+                        "group": "index"
+                    },
+                    {
+                        "pattern": "types/**",
+                        "group": "type"
+                    },
+                    {
+                        "pattern": "~/*.styled",
+                        "group": "sibling"
+                    }
+                ],
+                "pathGroupsExcludedImportTypes": [],
+                "groups": [
+                    "builtin",
+                    "external",
+                    "internal",
+                    "parent",
+                    "sibling",
+                    "index",
+                    "object",
+                    "type"
+                ],
+                "newlines-between": "always"
+            }
+        ],
+        "@typescript-eslint/array-type": ["error", { "default": "generic" }],
+        "better-styled-components/sort-declarations-alphabetically": 2,
+        "react/jsx-curly-brace-presence": [
+            "error",
+            {
+                "children": "never",
+                "props": "never"
+            }
+        ],
+        "styled-components-a11y/anchor-is-valid": "off",
+        "styled-components-a11y/control-has-associated-label": [
+            2,
+            {
+                "labelAttributes": ["label"],
+                "controlComponents": ["CustomComponent"],
+                "ignoreElements": [
+                    "audio",
+                    "canvas",
+                    "embed",
+                    "input",
+                    "textarea",
+                    "tr",
+                    "video"
+                ],
+                "ignoreRoles": [
+                    "grid",
+                    "listbox",
+                    "menu",
+                    "menubar",
+                    "radiogroup",
+                    "row",
+                    "tablist",
+                    "toolbar",
+                    "tree",
+                    "treegrid"
+                ],
+                "depth": 3
+            }
+        ],
+        "no-console": "warn",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "react/react-in-jsx-scope": "off",
+        "indent": "off",
+        "sort-imports-es6-autofix/sort-imports-es6": [
+            2,
+            {
+                "ignoreCase": false,
+                "ignoreMemberSort": false,
+                "memberSyntaxSortOrder": ["none", "all", "multiple", "single"]
+            }
+        ],
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error",
+        "sort-keys-fix/sort-keys-fix": "error",
+        "absolute-import/no-relative-path": "error",
+        "@typescript-eslint/no-inferrable-types": "error",
+        "@typescript-eslint/member-delimiter-style": "error",
+        "@typescript-eslint/naming-convention": [
+            "error",
+            {
+                "selector": "interface",
+                "format": ["PascalCase"],
+                "custom": {
+                    "regex": "^I[A-Z]",
+                    "match": false
+                }
+            }
+        ],
+        "no-multi-spaces": "off"
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".ts", ".tsx"]
+            }
+        },
+        "react": {
+            "version": "16.8.6"
+        }
+    }
 }
