@@ -9,9 +9,11 @@ Below is a HTML/CSS/JS exercise that involves building out a web component, or s
 - Bonus: Use a module bundler or task manager such as Webpack to compile static assets. Along with this, include a linter for your code (ESLint, Prettier, ect.).
 
 ## Exercise
+
 In index.html, rebuild the mocks in the designs folder in semantic HTML, CSS and JS. The designs represent layouts in a smaller screen and a larger screen. It is not 2 pages. Feel free to diverge from the designs and apply your own creativity. The goal is to build a simple UI that allows users to navigate between various shows while displaying the corresponding meta data for each.
 
 ## Specs:
+
 - There are 10 shows, each with an id, title, episode count, and cover art. (see shows.json).
 - Load the data using AJAX from `http://localhost:3000/shows` (you can start the server up using `yarn start-api`)
 - When landing on the page initially, the first show should be selected.
