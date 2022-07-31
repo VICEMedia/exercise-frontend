@@ -6,13 +6,27 @@
   "author": "VICE Engineering <engineering@vice.com>",
   "license": "MIT",
   "scripts": {
-    "start-api": "json-server --watch shows.json"
+    "start-api": "json-server --watch shows.json",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "json-server": "0.16.1"
+    "fs": "^0.0.1-security",
+    "json-server": "0.16.1",
+    "next": "12.2.3",
+    "path": "^0.12.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "swr": "^1.3.0"
   },
-  "engines": {
-    "node": "12.14.1",
-    "npm": "6.13.6"
+  "devDependencies": {
+    "@types/node": "18.6.3",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
+    "eslint": "8.20.0",
+    "eslint-config-next": "12.2.3",
+    "typescript": "4.7.4"
   }
 }
