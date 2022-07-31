@@ -1,0 +1,17 @@
+[
+    {
+        "priority": 1,
+        "url": "/"
+    },
+    {
+        "params": {
+            "slug": "fields.slug"
+        },
+        "pattern": "/news/:slug",
+        "priority": 0.5,
+        "query": {
+            "content_type": "newsItem",
+            "select": "fields.slug"
+        }
+    }
+]
