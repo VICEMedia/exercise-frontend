@@ -5,7 +5,7 @@ import NextHead from "next/head";
 export function BaseHead(): JSX.Element {
     const googleSiteVerificationToken = "##";
     const themeColor = "#FFFFFF";
-    const applicationName = "Location/Weather/Pokemon";
+    const applicationName = "ViceMEDIA/Shows";
 
     return (
         <NextHead>
@@ -25,28 +25,14 @@ export function BaseHead(): JSX.Element {
             />
             <link
                 rel="preload"
-                href="/fonts/Boston-Regular.woff2"
+                href="/fonts/OpenSans-Regular.woff2"
                 as="font"
                 type="font/woff2"
                 crossOrigin="anonymous"
             />
             <link
                 rel="preload"
-                href="/fonts/Outfit-Regular.woff2"
-                as="font"
-                type="font/woff2"
-                crossOrigin="anonymous"
-            />
-            <link
-                rel="preload"
-                href="/fonts/Outfit-Medium.woff2"
-                as="font"
-                type="font/woff2"
-                crossOrigin="anonymous"
-            />
-            <link
-                rel="preload"
-                href="/fonts/Outfit-Bold.woff2"
+                href="/fonts/OpenSans-Bold.woff2"
                 as="font"
                 type="font/woff2"
                 crossOrigin="anonymous"
@@ -162,31 +148,17 @@ export function BaseHead(): JSX.Element {
                 dangerouslySetInnerHTML={{__html: css`
                         @font-face {
                             font-display: swap;
-                            font-family: "Boston";
+                            font-family: "Open Sans";
                             font-style: normal;
                             font-weight: normal;
-                            src: local("Boston-Regular"), url("/fonts/Boston-Regular.woff2") format("woff2");
+                            src: local("OpenSans-Regular"), url("/fonts/OpenSans-Regular.woff2") format("woff2");
                         }
                         @font-face {
                             font-display: swap;
-                            font-family: "Outfit";
+                            font-family: "Open Sans";
                             font-style: normal;
-                            font-weight: 400;
-                            src: local("Outfit-Regular"), url("/fonts/Outfit-Regular.woff2") format("woff2");
-                        }
-                        @font-face {
-                            font-display: swap;
-                            font-family: "Outfit";
-                            font-style: normal;
-                            font-weight: 500;
-                            src: local("Outfit-Medium"), url("/fonts/Outfit-Medium.woff2") format("woff2");
-                        }
-                        @font-face {
-                            font-display: swap;
-                            font-family: "Outfit";
-                            font-style: normal;
-                            font-weight: 600;
-                            src: local("Outfit-Bold"), url("/fonts/Outfit-Bold.woff2") format("woff2");
+                            font-weight: 700;
+                            src: local("OpenSans-Bold"), url("/fonts/OpenSans-Bold.woff2") format("woff2");
                         }
                         /* css function of styled-components returns a FlattenSimpleInterpolation type,
                         which does not completely overlap with the type string expected by dangerouslySetInnerHTML */
