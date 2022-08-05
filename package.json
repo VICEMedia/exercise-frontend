@@ -4,21 +4,23 @@
     "license": "UNLICENSED",
     "private": true,
     "scripts": {
-        "dev": "next dev",
         "build": "next build",
-        "start": "next start",
-        "lint": "next lint",
+        "dev": "next dev -p 3001",
         "eslint": "eslint . --ext ts --ext tsx",
-        "stylelint": "stylelint --ignore-path .gitignore \"**/*.{ts,tsx}\"",
+        "lint": "next lint",
         "prettier:check": "prettier --ignore-path .gitignore --check \"**/*.{js, ts, tsx}\"",
-        "analyze": "ANALYZE=true yarn build"
+        "start-api": "json-server --watch json/shows.json",
+        "start": "next start -p 3001",
+        "stylelint": "stylelint --ignore-path .gitignore \"**/*.{ts,tsx}\""
     },
     "dependencies": {
         "@next/bundle-analyzer": "^12.1.6",
+        "json-server": "^0.17.0",
         "next": "12.1.6",
         "next-compose-plugins": "^2.2.1",
         "next-pwa": "^5.5.4",
         "normalize.css": "^8.0.1",
+        "nuka-carousel": "^5.2.0",
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "react-intersection-observer": "^9.3.3",

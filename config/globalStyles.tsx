@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         
         --color-white: #fff;
         --color-black: #000;
+        --color-light-grey: #aaa;
 
         /* Transition duration variable */
         --quick-transition-duration: 150ms;
@@ -17,11 +18,9 @@ export const GlobalStyle = createGlobalStyle`
 
         /* Typography */
 
-        --font-primary: "Outfit";
-        --font-secondary: "Boston";
+        --font-primary: "Open Sans";
 
         --font-weight-normal: 400;
-        --font-weight-medium: 500;
         --font-weight-bold: 700;
 
         --type-heading-1-font-size: 32px;
@@ -45,15 +44,6 @@ export const GlobalStyle = createGlobalStyle`
 
         --type-sub-text-font-size-sub-text: 12px;
         --type-sub-text-line-height: 24px;
-
-        /* Modal Overlay */
-        --overlay-color: rgba(0, 0, 0, 0.3);
-
-        /* Misc */
-        
-        --general-desktop-max-width: 1440px;
-        --grid-max-width-desktop: 1248px;
-        --letter-spacing-small: 0.02em;
 
         /* Smooth scroll behavior for scrolling to ID'ed elements on static pages */
 
@@ -114,7 +104,6 @@ export const GlobalStyle = createGlobalStyle`
     h6 {
         font-size: var(--type-heading-6-font-size);
         line-height: var(--type-heading-6-line-height);
-        text-transform: uppercase;
     }
 
     p {
