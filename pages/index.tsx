@@ -1,16 +1,32 @@
-import showsData from "json/shows.json";
-import type { NextPage } from "next";
+import ShowsSlider from "components/shared/showsSlider/ShowsSlider";
+
+import { fetchShows } from "helpers/api/fetchShows";
 
 import { Show } from "types/show";
 
-const HomePage: NextPage = () => {
-    return (
-        <div>
-            {showsData?.shows.map((show: Show) => (
-                <p key={show?.title}>{show?.title}</p>
-            ))}
-        </div>
-    );
-};
+function HomePage({ shows }: { shows: Array<Show> }) {
+    return <main>{shows && <ShowsSlider items={shows} />}</main>;
+}
+
+export async function getStaticProps() {
+    let shows;
+
+    try {
+        shows = await fetchShows();
+
+        return {
+            props: { shows: shows || [] },
+            revalidate: 86400
+        };
+    } catch (err) {
+        // eslint-disable-next-line no-console
+        console.error(err);
+    }
+
+    return {
+        props: { shows: shows ?? [] },
+        revalidate: 86400
+    };
+}
 
 export default HomePage;
