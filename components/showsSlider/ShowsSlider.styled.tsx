@@ -13,8 +13,7 @@ export const SliderItem = styled.div`
     text-decoration: none;
 `;
 
-export const ShowTitle = styled.h2`
-    font-size: 22px;
+export const ShowTitle = styled.h1`
     text-transform: uppercase;
 `;
 
@@ -24,10 +23,11 @@ export const ImageContainer = styled.div`
 `;
 
 export const EpisodesQuantity = styled.span`
-    color: var(--color-light-grey);
+    color: var(--color-grey);
     flex: 1 0 100%;
-    font-family: var(--font-primary);
-    font-size: 14px;
+    font-family: var(--font-primary), sans-serif;
+    font-size: var(--type-sub-text-font-size);
     font-weight: var(--font-weight-bold);
+    line-height: var(--type-sub-text-line-height);
     text-transform: uppercase;
 `;

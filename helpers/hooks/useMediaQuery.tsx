@@ -9,18 +9,10 @@ export interface MediaQueryProviderProps {
 }
 
 const mediaQueries = {
-    desktop: `(min-width: ${sizes.lg}px)`,
-    mobile: `(max-width: ${sizes.md - 1}px)`,
-    tablet: `(min-width: ${sizes.md}px) and (max-width: ${sizes.lg - 1}px)`,
-    tabletAndLarger: `(min-width: ${sizes.md}px)`,
-    xlDesktop: `(min-width: ${sizes.xl}px)`
+    tablet: `(min-width: ${sizes.md}px)`
 };
 
 interface MediaQueryProps {
-    isXlDesktopView: boolean;
-    isMobileView: boolean;
-    isDesktopView: boolean;
-    isTabletView: boolean;
     isTabletViewOrLarger: boolean;
 }
 
@@ -34,27 +26,13 @@ export function MediaQueryProvider({
     children
 }: MediaQueryProviderProps): JSX.Element {
     {
-        const isMobileView = useMedia(mediaQueries.mobile);
-        const isTabletView = useMedia(mediaQueries.tablet);
-        const isTabletViewOrLarger = useMedia(mediaQueries.tabletAndLarger);
-        const isDesktopView = useMedia(mediaQueries.desktop);
-        const isXlDesktopView = useMedia(mediaQueries.xlDesktop);
+        const isTabletViewOrLarger = useMedia(mediaQueries.tablet);
 
         const value = useMemo(
             () => ({
-                isDesktopView,
-                isMobileView,
-                isTabletView,
-                isTabletViewOrLarger,
-                isXlDesktopView
+                isTabletViewOrLarger
             }),
-            [
-                isMobileView,
-                isDesktopView,
-                isTabletView,
-                isTabletViewOrLarger,
-                isXlDesktopView
-            ]
+            [isTabletViewOrLarger]
         );
 
         return (
