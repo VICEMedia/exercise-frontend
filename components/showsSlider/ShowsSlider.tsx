@@ -36,9 +36,9 @@ export function Slider({ items }: { items: Array<Show> }): JSX.Element {
         }
 
         router.push(`/?id=${items[0].id}`);
-        // disabling exhaustive-deps because of a bug when referencing the useRouter hook inside of a useEffect
-        // check https://github.com/vercel/next.js/discussions/29403
-        // check https://stackoverflow.com/questions/69203538/useeffect-dependencies-when-using-nextjs-router
+        // Disabling exhaustive-deps because of a bug when referencing the useRouter hook inside of a useEffect
+        // Check https://github.com/vercel/next.js/discussions/29403
+        // Check https://stackoverflow.com/questions/69203538/useeffect-dependencies-when-using-nextjs-router
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [queryId, router.query.id]);
 

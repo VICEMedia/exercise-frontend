@@ -25,20 +25,18 @@ export function useMediaQueryContext(): MediaQueryProps {
 export function MediaQueryProvider({
     children
 }: MediaQueryProviderProps): JSX.Element {
-    {
-        const isTabletViewOrLarger = useMedia(mediaQueries.tablet);
+    const isTabletViewOrLarger = useMedia(mediaQueries.tablet);
 
-        const value = useMemo(
-            () => ({
-                isTabletViewOrLarger
-            }),
-            [isTabletViewOrLarger]
-        );
+    const value = useMemo(
+        () => ({
+            isTabletViewOrLarger
+        }),
+        [isTabletViewOrLarger]
+    );
 
-        return (
-            <MediaQueryContext.Provider value={value}>
-                {children}
-            </MediaQueryContext.Provider>
-        );
-    }
+    return (
+        <MediaQueryContext.Provider value={value}>
+            {children}
+        </MediaQueryContext.Provider>
+    );
 }

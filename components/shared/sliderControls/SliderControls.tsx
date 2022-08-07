@@ -25,6 +25,7 @@ function SliderControls({
 }: SliderControlsProps): JSX.Element {
     const dots = new Array(totalSlides).fill("");
 
+    // TO DO: Emulate touch events on desktop so the scrolling can work with drag and drop too
     return (
         <StyledSliderControls className={className}>
             <Dots>
@@ -34,7 +35,7 @@ function SliderControls({
                             isSelected={index === currentSlide}
                             onClick={() => onChange(index)}
                         />
-                        <SlideNumber>{currentSlide}</SlideNumber>
+                        <SlideNumber>{index}</SlideNumber>
                     </DotWrapper>
                 ))}
             </Dots>
