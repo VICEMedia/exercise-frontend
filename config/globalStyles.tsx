@@ -1,15 +1,14 @@
 import { createGlobalStyle } from "styled-components";
 
-import { media } from "constants/media";
-
 export const GlobalStyle = createGlobalStyle`
     html {
 
         /* ===== Theme colors ====== */
         
-        --color-white: #fff;
         --color-black: #000;
-        --color-light-grey: #aaa;
+        --color-grey: #aaa;
+        --color-light-grey: #e5e5e5;
+        --color-white: #fff;
 
         /* Transition duration variable */
         --quick-transition-duration: 150ms;
@@ -23,51 +22,18 @@ export const GlobalStyle = createGlobalStyle`
         --font-weight-normal: 400;
         --font-weight-bold: 700;
 
-        --type-heading-1-font-size: 32px;
-        --type-heading-1-line-height: 48px;
-        --type-heading-2-font-size: 30px;
-        --type-heading-2-line-height: 40px;
-        --type-heading-3-font-size: 25px;
-        --type-heading-3-line-height: 40px;
-        --type-heading-4-font-size: 24px;
-        --type-heading-4-line-height: 32px;
-        --type-heading-5-font-size: 16px;
-        --type-heading-5-line-height: 28px;
-        --type-heading-6-font-size: 14px;
-        --type-heading-6-line-height: 24px;
+        --type-heading-1-font-size: 22px;
+        --type-heading-1-line-height: 22px;
 
-        --type-paragraph-font-size: 13px;
-        --type-paragraph-line-height: 24px;
+        --type-label-font-size: 28px;
+        --type-label-line-height: 64px;
 
-        --type-label-font-size: 14px;
-        --type-label-line-height: 24px;
-
-        --type-sub-text-font-size-sub-text: 12px;
-        --type-sub-text-line-height: 24px;
+        --type-sub-text-font-size: 12px;
+        --type-sub-text-line-height: 14px;
 
         /* Smooth scroll behavior for scrolling to ID'ed elements on static pages */
 
         scroll-behavior: smooth;
-
-        ${media.mdUp} {
-            --type-heading-1-font-size: 55px;
-            --type-heading-1-line-height: 64px;
-            --type-heading-2-font-size: 45px;
-            --type-heading-2-line-height: 64px;
-            --type-heading-3-font-size: 40px;
-            --type-heading-3-line-height: 56px;
-            --type-heading-4-font-size: 35px;
-            --type-heading-4-line-height: 48px;
-            --type-heading-5-font-size: 20px;
-            --type-heading-5-line-height: 32px;
-            --type-heading-6-font-size: 15px;
-            --type-heading-6-line-height: 32px;
-
-            --type-paragraph-font-size: 15px;
-            --type-paragraph-line-height: 32px;
-
-            --type-sub-text-font-size-sub-text: 14px;
-        }
     }
 
     * {

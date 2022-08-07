@@ -1,4 +1,4 @@
-import ShowsSlider from "components/shared/showsSlider/ShowsSlider";
+import ShowsSlider from "components/showsSlider/ShowsSlider";
 
 import { fetchShows } from "helpers/api/fetchShows";
 
