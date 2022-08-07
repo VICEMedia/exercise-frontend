@@ -1,0 +1,37 @@
+{
+    "presets": ["next/babel"],
+    "env": {
+        "production": {
+            "plugins": [
+                "jsx-remove-data-test-id",
+                [
+                    "styled-components",
+                    {
+                        "ssr": true,
+                        "displayName": false,
+                        "preprocess": true,
+                        "minify": true
+                    }
+                ],
+                [
+                    "react-remove-properties",
+                    {
+                        "properties": ["data-testid"]
+                    }
+                ]
+            ]
+        }
+    },
+    "plugins": [
+        [
+            "styled-components",
+            {
+                "ssr": true,
+                "displayName": true,
+                "preprocess": true,
+                "pure": true,
+                "transpileTemplateLiterals": true
+            }
+        ]
+    ]
+}

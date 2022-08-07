@@ -1,0 +1,43 @@
+{
+    "processors": ["stylelint-processor-styled-components"],
+    "extends": [
+        "stylelint-prettier/recommended",
+        "stylelint-config-recommended",
+        "stylelint-config-sass-guidelines"
+    ],
+    "plugins": ["stylelint-selector-bem-pattern"],
+    "rules": {
+        "no-empty-source": null,
+        "at-rule-disallowed-list": ["extend"],
+        "indentation": 4,
+        "max-nesting-depth": 5,
+        "selector-max-compound-selectors": 4,
+        "string-quotes": "double",
+        "property-no-vendor-prefix": [
+            true,
+            {
+                "ignoreProperties": [
+                    "box-orient",
+                    "line-clamp",
+                    "mask-image",
+                    "mask-position",
+                    "mask-repeat",
+                    "mask-size"
+                ]
+            }
+        ],
+        "value-no-vendor-prefix": [
+            true,
+            {
+                "ignoreValues": ["box"]
+            }
+        ],
+        "plugin/selector-bem-pattern": {
+            "componentName": "(([a-z0-9]+(?!-$)-?)+)",
+            "componentSelectors": {
+                "initial": "\\.{componentName}(((__|--)(([a-z0-9\\[\\]'=]+(?!-$)-?)+))+)?$"
+            },
+            "ignoreSelectors": [".*\\.no-js.*", ".*\\.js-.*", ".*\\.lt-ie.*"]
+        }
+    }
+}
